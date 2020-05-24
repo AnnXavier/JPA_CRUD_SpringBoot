@@ -1,6 +1,7 @@
 plugins {
 	id 'org.springframework.boot' version '2.3.0.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	//id 'io.freefair.lombok' version '3.8.4'
 	id 'java'
 }
 
@@ -17,6 +18,10 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	runtimeOnly 'com.oracle.ojdbc:ojdbc8'
+	//compile 'org.projectlombok:lombok'
+	//annotationProcessor("org.projectlombok:lombok:1.18.4")
+	compileOnly 'org.projectlombok:lombok:1.18.8'
+	annotationProcessor 'org.projectlombok:lombok:1.18.8'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
